@@ -1,0 +1,25 @@
+<section class="contact" id="contacto">
+  <div class="contact__grid"></div>
+  <p class="contact__tag">// 06 — contacto</p>
+  <h2 class="contact__title">Contac<span>tame</span></h2>
+
+  <div class="contact__wrap">
+    <p class="contact__desc">
+      ¿Tienes un proyecto en mente o quieres colaborar? No dudes en escribirme.
+    </p>
+    <a href="mailto:avoc451&#64;gmail.com" class="contact__email">
+      avoc451&#64;gmail.com
+    </a>
+
+    <div class="contact__socials">
+      <ng-container *ngFor="let s of socials">
+        <a *ngIf="s.url" [href]="s.url" target="_blank" class="contact__link">
+          <span>{{ s.icon }}</span> {{ s.label }}
+        </a>
+        <span *ngIf="!s.url" class="contact__link contact__link--static">
+          <span>{{ s.icon }}</span> {{ s.label }}
+        </span>
+      </ng-container>
+    </div>
+  </div>
+</section>

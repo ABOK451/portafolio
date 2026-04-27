@@ -1,0 +1,10 @@
+<section class="projects" id="proyectos">
+  <div class="projects__grid"></div>
+  <p class="projects__tag">// 02 — proyectos</p>
+  <h2 class="projects__title">Mis <span>Proyectos</span></h2>
+
+  <div class="projects__cards">
+    <app-project-card *ngFor="let project of projects" [project]="project">
+    </app-project-card>
+  </div>
+</section>

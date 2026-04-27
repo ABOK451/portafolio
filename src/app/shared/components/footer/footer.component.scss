@@ -1,0 +1,26 @@
+.footer {
+  background: #060609;
+  padding: 24px 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #00ffe715;
+
+  &__logo {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 13px;
+    color: #333;
+    letter-spacing: 2px;
+
+    span {
+      color: #00ffe7;
+    }
+  }
+
+  &__copy {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    color: #333;
+    letter-spacing: 1px;
+  }
+}

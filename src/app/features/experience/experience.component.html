@@ -1,0 +1,41 @@
+<section class="exp" id="experiencia">
+  <div class="exp__grid"></div>
+  <p class="exp__tag">// 03 — experiencia</p>
+  <h2 class="exp__title">Experi<span>encia</span></h2>
+
+  <div class="exp__list">
+    <div
+      class="exp__item"
+      *ngFor="let exp of experiences; let i = index"
+      [class.exp__item--open]="openIndex === i"
+      (click)="toggle(i)"
+    >
+      <div class="exp__header">
+        <div class="exp__left">
+          <div class="exp__dot" [class.exp__dot--current]="exp.current"></div>
+          <div>
+            <p class="exp__company">{{ exp.company }}</p>
+            <p class="exp__role">{{ exp.role }}</p>
+          </div>
+        </div>
+        <div class="exp__right">
+          <span class="exp__period">{{ exp.period }}</span>
+          <span class="exp__arrow">▶</span>
+        </div>
+      </div>
+
+      <div class="exp__body">
+        <div class="exp__content">
+          <p class="exp__type">{{ exp.type }}</p>
+          <p class="exp__location">// {{ exp.location }}</p>
+          <p class="exp__desc">{{ exp.description }}</p>
+          <div class="exp__techs">
+            <span class="exp__badge" *ngFor="let tech of exp.techs">{{
+              tech
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

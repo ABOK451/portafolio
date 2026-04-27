@@ -1,0 +1,163 @@
+.hero {
+  background: #0a0a0f;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  font-family: "Rajdhani", sans-serif;
+  position: relative;
+  overflow: hidden;
+
+  &__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(#00ffe708 1px, transparent 1px),
+      linear-gradient(90deg, #00ffe708 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  &__left {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__tag {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    color: #00ffe7;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin: 0 0 4px;
+    span {
+      color: #00ffe7;
+    }
+  }
+
+  &__role {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.1rem;
+    color: #ff2d78;
+    letter-spacing: 2px;
+    min-height: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__cursor {
+    animation: blink 1s infinite;
+    color: #00ffe7;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    color: #666;
+    max-width: 420px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.75rem;
+    padding: 12px 28px;
+    background: transparent;
+    color: #00ffe7;
+    border: 1px solid #00ffe7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition:
+      background 0.2s,
+      color 0.2s;
+    display: inline-block;
+
+    &:hover {
+      background: #00ffe7;
+      color: #0a0a0f;
+    }
+  }
+
+  &__right {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__avatar-wrap {
+    position: relative;
+    width: 220px;
+    height: 220px;
+  }
+
+  &__corner {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: #ff2d78;
+    border-style: solid;
+
+    &--tl {
+      top: -4px;
+      left: -4px;
+      border-width: 2px 0 0 2px;
+    }
+    &--tr {
+      top: -4px;
+      right: -4px;
+      border-width: 2px 2px 0 0;
+    }
+    &--bl {
+      bottom: -4px;
+      left: -4px;
+      border-width: 0 0 2px 2px;
+    }
+    &--br {
+      bottom: -4px;
+      right: -4px;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &__avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 4px;
+    border: 1px solid #00ffe7;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #00ffe7;
+    opacity: 0.15;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

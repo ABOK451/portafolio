@@ -1,0 +1,44 @@
+<section class="skills" id="habilidades">
+  <div class="skills__grid"></div>
+  <p class="skills__tag">// 04 — habilidades</p>
+  <h2 class="skills__title">Stack <span>Tecnológico</span></h2>
+
+  <div class="skills__group">
+    <p class="skills__category">// Frontend & Mobile</p>
+    <div class="skills__items">
+      <div class="skill" *ngFor="let s of frontend">
+        <span class="skill__icon">{{ s.icon }}</span>
+        <span class="skill__name">{{ s.name }}</span>
+        <div class="skill__bar-wrap">
+          <div class="skill__bar" [style.width.%]="s.level"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills__group">
+    <p class="skills__category">// Backend & DevOps</p>
+    <div class="skills__items">
+      <div class="skill" *ngFor="let s of backend">
+        <span class="skill__icon">{{ s.icon }}</span>
+        <span class="skill__name">{{ s.name }}</span>
+        <div class="skill__bar-wrap">
+          <div class="skill__bar" [style.width.%]="s.level"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills__group">
+    <p class="skills__category">// Bases de Datos</p>
+    <div class="skills__items">
+      <div class="skill" *ngFor="let s of databases">
+        <span class="skill__icon">{{ s.icon }}</span>
+        <span class="skill__name">{{ s.name }}</span>
+        <div class="skill__bar-wrap">
+          <div class="skill__bar" [style.width.%]="s.level"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

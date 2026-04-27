@@ -1,0 +1,97 @@
+.skills {
+  padding: 80px 4rem;
+  background: #0a0a0f;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #00ffe715;
+  font-family: "Rajdhani", sans-serif;
+
+  &__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(#00ffe705 1px, transparent 1px),
+      linear-gradient(90deg, #00ffe705 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  &__tag {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    color: #00ffe7;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff2d78;
+
+    margin-bottom: 48px;
+    span {
+      color: #00ffe7;
+    }
+  }
+
+  &__group {
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  &__category {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    color: #ff2d78;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+.skill {
+  background: #0d0d18;
+  border: 1px solid #1a1a2e;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    border-color: #00ffe7;
+    transform: translateY(-3px);
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 6px;
+  }
+  &__name {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__bar-wrap {
+    height: 2px;
+    background: #1a1a2e;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  &__bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffe7, #ff2d78);
+    border-radius: 1px;
+  }
+}

@@ -1,0 +1,77 @@
+.card {
+  background: #0d0d18;
+  border: 1px solid #1a1a2e;
+  border-radius: 4px;
+  padding: 1.5rem;
+  position: relative;
+  transition: border-color 0.2s;
+  font-family: "Rajdhani", sans-serif;
+
+  &:hover {
+    border-color: #00ffe7;
+  }
+  &:hover .card__glow {
+    opacity: 1;
+  }
+
+  &__glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #00ffe705, transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+
+  &__tag {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 10px;
+    color: #ff2d78;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  &__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00ffe7;
+    margin-bottom: 8px;
+  }
+  &__desc {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  &__techs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  &__badge {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border: 1px solid #00ffe730;
+    color: #00ffe7;
+    border-radius: 2px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 12px;
+  }
+  &__link {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    &:hover {
+      color: #00ffe7;
+    }
+  }
+}

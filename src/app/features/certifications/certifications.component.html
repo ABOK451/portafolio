@@ -1,0 +1,38 @@
+<section class="certs" id="certificaciones">
+  <div class="certs__grid"></div>
+  <p class="certs__tag">// 05 — certificaciones</p>
+  <h2 class="certs__title">Mis <span>Certificaciones</span></h2>
+
+  <div class="certs__cards">
+    <div class="cert-card" *ngFor="let cert of certifications">
+      <div class="cert-card__glow"></div>
+
+      <div class="cert-card__img">
+        <span *ngIf="!cert.image">{{ cert.icon }}</span>
+        <img *ngIf="cert.image" [src]="cert.image" [alt]="cert.name" />
+      </div>
+
+      <div class="cert-card__body">
+        <p class="cert-card__issuer">{{ cert.issuer }}</p>
+        <p class="cert-card__name">{{ cert.name }}</p>
+        <p class="cert-card__date">Expedición: {{ cert.date }}</p>
+        <p class="cert-card__id" *ngIf="cert.credentialId">
+          ID: {{ cert.credentialId }}
+        </p>
+
+        <a
+          *ngIf="cert.credentialUrl"
+          [href]="cert.credentialUrl"
+          target="_blank"
+          class="cert-card__link"
+        >
+          [ Ver credencial ]
+        </a>
+
+        <span *ngIf="!cert.credentialUrl" class="cert-card__no-link"
+          >// Sin URL pública</span
+        >
+      </div>
+    </div>
+  </div>
+</section>

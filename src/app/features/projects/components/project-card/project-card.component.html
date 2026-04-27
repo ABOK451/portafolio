@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card__glow"></div>
+  <p class="card__tag">{{ project.tag }}</p>
+  <p class="card__name">{{ project.name }}</p>
+  <p class="card__desc">{{ project.description }}</p>
+  <div class="card__techs">
+    <span class="card__badge" *ngFor="let tech of project.techs">{{
+      tech
+    }}</span>
+  </div>
+  <div class="card__links">
+    <a
+      *ngIf="project.github"
+      [href]="project.github"
+      target="_blank"
+      class="card__link"
+      >[ GitHub ]</a
+    >
+    <a
+      *ngIf="project.live"
+      [href]="project.live"
+      target="_blank"
+      class="card__link"
+      >[ Live ]</a
+    >
+  </div>
+</div>
