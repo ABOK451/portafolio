@@ -69,22 +69,10 @@ export class CertificationsComponent {
       icon: "🐧",
     },
     {
-      name: "Word 2019 Académico",
-      issuer: "Testing Program Académico",
-      date: "2022",
-      icon: "📝",
-    },
-    {
-      name: "Excel 2019 Académico",
+      name: "Certificación Microsoft Office 2019 Académico",
       issuer: "Testing Program Académico",
       date: "2022",
       icon: "📊",
-    },
-    {
-      name: "Power Point 2019 Académico",
-      issuer: "Testing Program Académico",
-      date: "2022",
-      icon: "📑",
     },
   ];
 }
