@@ -4,6 +4,7 @@ interface Skill {
   name: string;
   icon: string;
   level: number;
+  isSvg?: boolean;
 }
 
 @Component({
@@ -14,27 +15,28 @@ interface Skill {
 })
 export class SkillsComponent {
   frontend: Skill[] = [
-    { name: "Angular", icon: "🅰️", level: 90 },
-    { name: "JavaScript", icon: "🟨", level: 92 },
-    { name: "TypeScript", icon: "🔷", level: 88 },
-    { name: "Flutter", icon: "📱", level: 80 },
-    { name: "Ionic", icon: "⚡", level: 75 },
-    { name: "Unity", icon: "🎮", level: 60 },
+    { name: "", icon: "assets/icons/angular.svg", level: 90, isSvg: true },
+    { name: "", icon: "assets/icons/js.svg", level: 92, isSvg: true },
+    { name: "", icon: "assets/icons/ts.svg", level: 88, isSvg: true },
+    { name: "", icon: "assets/icons/flutter.svg", level: 80, isSvg: true },
+    { name: "", icon: "assets/icons/ionic.svg", level: 75, isSvg: true },
+    { name: "", icon: "assets/icons/unity.svg", level: 60, isSvg: true },
   ];
 
   backend: Skill[] = [
-    { name: "Node.js", icon: "🟢", level: 85 },
-    { name: "Linux", icon: "🐧", level: 80 },
-    { name: "Docker", icon: "🐋", level: 75 },
-    { name: "Azure", icon: "☁️", level: 70 },
-    { name: "Railway", icon: "🚂", level: 78 },
-    { name: "Android", icon: "📱", level: 72 },
+    { name: "", icon: "assets/icons/node.svg", level: 85, isSvg: true },
+    { name: "", icon: "assets/icons/linux.svg", level: 80, isSvg: true },
+    { name: "", icon: "assets/icons/docker.svg", level: 75, isSvg: true },
+    { name: "", icon: "assets/icons/azure.svg", level: 70, isSvg: true },
+    { name: "", icon: "assets/icons/railway.svg", level: 78, isSvg: true },
+    { name: "", icon: "assets/icons/android.svg", level: 72, isSvg: true },
   ];
 
   databases: Skill[] = [
-    { name: "MySQL", icon: "🐬", level: 88 },
-    { name: "MariaDB", icon: "🦭", level: 85 },
-    { name: "PostgreSQL", icon: "🐘", level: 80 },
-    { name: "MongoDB", icon: "🍃", level: 82 },
+    { name: "", icon: "assets/icons/mysql.svg", level: 88, isSvg: true },
+    { name: "", icon: "assets/icons/sql.svg", level: 85, isSvg: true },
+    { name: "", icon: "assets/icons/mariadb.svg", level: 85, isSvg: true },
+    { name: "", icon: "assets/icons/postgresql.svg", level: 80, isSvg: true },
+    { name: "", icon: "assets/icons/mongodb.svg", level: 82, isSvg: true },
   ];
 }

@@ -7,7 +7,13 @@
     <p class="skills__category">// Frontend & Mobile</p>
     <div class="skills__items">
       <div class="skill" *ngFor="let s of frontend">
-        <span class="skill__icon">{{ s.icon }}</span>
+        <img
+          *ngIf="s.isSvg"
+          [src]="s.icon"
+          [alt]="s.name"
+          class="skill__icon-img"
+        />
+        <span *ngIf="!s.isSvg" class="skill__icon">{{ s.icon }}</span>
         <span class="skill__name">{{ s.name }}</span>
         <div class="skill__bar-wrap">
           <div class="skill__bar" [style.width.%]="s.level"></div>
@@ -20,7 +26,13 @@
     <p class="skills__category">// Backend & DevOps</p>
     <div class="skills__items">
       <div class="skill" *ngFor="let s of backend">
-        <span class="skill__icon">{{ s.icon }}</span>
+        <img
+          *ngIf="s.isSvg"
+          [src]="s.icon"
+          [alt]="s.name"
+          class="skill__icon-img"
+        />
+        <span *ngIf="!s.isSvg" class="skill__icon">{{ s.icon }}</span>
         <span class="skill__name">{{ s.name }}</span>
         <div class="skill__bar-wrap">
           <div class="skill__bar" [style.width.%]="s.level"></div>
@@ -33,7 +45,13 @@
     <p class="skills__category">// Bases de Datos</p>
     <div class="skills__items">
       <div class="skill" *ngFor="let s of databases">
-        <span class="skill__icon">{{ s.icon }}</span>
+        <img
+          *ngIf="s.isSvg"
+          [src]="s.icon"
+          [alt]="s.name"
+          class="skill__icon-img"
+        />
+        <span *ngIf="!s.isSvg" class="skill__icon">{{ s.icon }}</span>
         <span class="skill__name">{{ s.name }}</span>
         <div class="skill__bar-wrap">
           <div class="skill__bar" [style.width.%]="s.level"></div>
