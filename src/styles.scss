@@ -1,2 +1,160 @@
-/* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background: #0a0a0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* =====================
+   RESPONSIVE GLOBAL
+   ===================== */
+
+/* Tablet — 768px */
+@media (max-width: 768px) {
+  /* Secciones — padding general */
+  section {
+    padding: 60px 1.5rem !important;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.8rem 1.5rem !important;
+    height: auto !important;
+    gap: 0.8rem;
+
+    &__links {
+      order: 3;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem !important;
+      justify-content: center;
+    }
+
+    &__cv {
+      font-size: 11px !important;
+    }
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 60px 1.5rem !important;
+    gap: 2rem;
+
+    &__name {
+      font-size: 2.5rem !important;
+    }
+    &__desc {
+      max-width: 100% !important;
+    }
+    &__right {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /* About */
+  .about__wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  /* Projects */
+  .projects__cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Skills */
+  .skills__items {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* Certifications */
+  .certs__cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Experience */
+  .exp__header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .exp__right {
+    width: 100%;
+    justify-content: space-between !important;
+  }
+
+  /* Contact */
+  .contact__socials {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column !important;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 16px 1.5rem !important;
+  }
+}
+
+/* Mobile — 480px */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero {
+    &__name {
+      font-size: 2rem !important;
+    }
+    &__avatar,
+    &__avatar-wrap {
+      width: 160px !important;
+      height: 160px !important;
+    }
+  }
+
+  /* Skills */
+  .skills__items {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Certifications */
+  .certs__cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Navbar links más pequeños */
+  .navbar__links a {
+    font-size: 11px !important;
+  }
+
+  /* Títulos de sección */
+  .about__title,
+  .projects__title,
+  .skills__title,
+  .certs__title,
+  .exp__title,
+  .contact__title {
+    font-size: 1.8rem !important;
+  }
+}
