@@ -8,8 +8,13 @@
       <div class="cert-card__glow"></div>
 
       <div class="cert-card__img">
-        <span *ngIf="!cert.image">{{ cert.icon }}</span>
-        <img *ngIf="cert.image" [src]="cert.image" [alt]="cert.name" />
+        <img
+          *ngIf="cert.isSvg"
+          [src]="cert.icon"
+          [alt]="cert.name"
+          class="cert-card__svg"
+        />
+        <span *ngIf="!cert.isSvg">{{ cert.icon }}</span>
       </div>
 
       <div class="cert-card__body">
@@ -19,7 +24,6 @@
         <p class="cert-card__id" *ngIf="cert.credentialId">
           ID: {{ cert.credentialId }}
         </p>
-
         <a
           *ngIf="cert.credentialUrl"
           [href]="cert.credentialUrl"
@@ -28,10 +32,9 @@
         >
           [ Ver credencial ]
         </a>
-
-        <span *ngIf="!cert.credentialUrl" class="cert-card__no-link"
-          >// Sin URL pública</span
-        >
+        <span *ngIf="!cert.credentialUrl" class="cert-card__no-link">
+          // Sin URL pública
+        </span>
       </div>
     </div>
   </div>

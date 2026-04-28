@@ -6,4 +6,5 @@ export interface Certification {
   credentialUrl?: string;
   icon: string;
   image?: string;
+  isSvg?: boolean;
 }
